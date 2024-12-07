@@ -46,6 +46,19 @@ class PaginaDeYouTube extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Go back when the back arrow is pressed
+          },
+        ),
+        title: const Text(
+          'YouTube Videos',
+          style: TextStyle(fontFamily: "Belgrano"),
+        ),
+        backgroundColor: const Color(0xffFEEFAD),
+      ),
       backgroundColor: const Color(0xffFEEFAD),
       body: SingleChildScrollView(
         child: Padding(
@@ -64,8 +77,7 @@ class PaginaDeYouTube extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 25,
-                      backgroundImage:
-                          AssetImage('assets/images/spaghetti.jpg'),
+                      backgroundImage: AssetImage('images/soare.webp'),
                     ),
                     SizedBox(width: 10),
                     Text(

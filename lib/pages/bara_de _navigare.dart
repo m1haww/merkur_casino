@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:merkur_casino/pages/cuki_main_page.dart';
 import 'package:merkur_casino/pages/map_page.dart';
+import 'package:merkur_casino/pages/note_interesante.dart';
+import 'package:merkur_casino/pages/notite_interesante.dart';
 
 import 'package:merkur_casino/pages/volum_control_page.dart';
 
@@ -17,7 +19,7 @@ class _BaradenavigareState extends State<Baradenavigare> {
 
   static final List<Widget> _pages = <Widget>[
     const cukimainpage(),
-    const MapPage(),
+    NoteInteresante(),
     const VolumeControlPage(),
   ];
 

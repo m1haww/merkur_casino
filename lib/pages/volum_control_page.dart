@@ -95,7 +95,7 @@ class _VolumeControlPageState extends State<VolumeControlPage> {
                         width: double.infinity,
                         height: height * 0.1,
                         decoration: BoxDecoration(
-                          color: const Color(0xff03AED2), // Background color
+                          color: const Color(0xffFCC737), // Background color
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Padding(
@@ -156,14 +156,14 @@ class _VolumeControlPageState extends State<VolumeControlPage> {
                         width: double.infinity,
                         height: height * 0.1,
                         decoration: BoxDecoration(
-                          color: const Color(0xff03AED2), // Background color
+                          color: const Color(0xffFCC737), // Background color
                           borderRadius: BorderRadius.circular(20),
                         ),
                         alignment: Alignment.center,
                         child: const Text(
                           "Playing Song: Lukrembo - Biscuit",
                           style: TextStyle(
-                              color: Color(0xffFDDE55),
+                              color: Colors.grey,
                               fontSize: 14,
                               fontFamily: "Belgrano"),
                         ),
