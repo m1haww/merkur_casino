@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class NoteInteresante extends StatefulWidget {
+  const NoteInteresante({super.key});
+
   @override
   _NoteInteresanteState createState() => _NoteInteresanteState();
 }
@@ -116,9 +118,8 @@ class _NoteInteresanteState extends State<NoteInteresante> {
             ClipRRect(
               borderRadius: BorderRadius.circular(45),
               child: Container(
-                decoration: BoxDecoration(
-                  color: const Color(
-                      0xFFFFF4CC), // Light accent for input background
+                decoration: const BoxDecoration(
+                  color: Color(0xFFFFF4CC), // Light accent for input background
                 ),
                 child: TextField(
                   controller: _noteController,

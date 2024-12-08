@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:merkur_casino/models/custom_container.dart';
 import 'package:merkur_casino/models/recipes_info.dart';
+import 'package:merkur_casino/pages/SeeAllRecipesPage.dart';
 import 'package:merkur_casino/pages/receipt_instructions.dart';
 
 class cukimainpage extends StatelessWidget {
@@ -8,6 +9,11 @@ class cukimainpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<RecipeInfo> allRecipes = [
+      ...morningBites,
+      ...middayMeals,
+      ...eveningFeasts,
+    ];
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: const Color(0xffFEEFAD),
@@ -74,9 +80,17 @@ class cukimainpage extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              SeeAllRecipesPage(recipes: allRecipes),
+                        ),
+                      );
+                    },
                     child: const Text(
-                      'See all',
+                      'Top Recipes',
                       style: TextStyle(
                           color: Colors.orange, fontFamily: 'Belgrano'),
                     ),

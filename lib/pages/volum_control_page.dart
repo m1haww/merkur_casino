@@ -78,6 +78,7 @@ class _VolumeControlPageState extends State<VolumeControlPage> {
               ),
             ),
             const SizedBox(height: 20),
+
             // Container for Volume Control and additional functionality
             ClipRRect(
               borderRadius: BorderRadius.circular(30),
@@ -151,7 +152,9 @@ class _VolumeControlPageState extends State<VolumeControlPage> {
                           ),
                         ),
                       ),
-                      // Additional functionality container
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
                       Container(
                         width: double.infinity,
                         height: height * 0.1,
@@ -167,6 +170,70 @@ class _VolumeControlPageState extends State<VolumeControlPage> {
                               fontSize: 14,
                               fontFamily: "Belgrano"),
                         ),
+                      ),
+                      const SizedBox(height: 20), // Space before icons and text
+                      // Icons with text near them
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          // Music Settings Icon with text
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  // Add functionality for music settings
+                                },
+                                child: const Icon(
+                                  Icons.music_note,
+                                  size: 15,
+                                  color: Color(0xffFAB12F),
+                                ),
+                              ),
+                              const Text("Good Sound",
+                                  style: TextStyle(
+                                      fontSize: 10, fontFamily: "Belgrano"))
+                            ],
+                          ),
+                          // Security Icon with text
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  // Add functionality for security
+                                },
+                                child: const Icon(
+                                  Icons.lock,
+                                  size: 15,
+                                  color: Color(0xffFAB12F),
+                                ),
+                              ),
+                              const Text("Privacy Policy",
+                                  style: TextStyle(
+                                      fontSize: 10, fontFamily: "Belgrano"))
+                            ],
+                          ),
+                          // Settings Icon with text
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  // Add functionality for settings
+                                },
+                                child: const Icon(
+                                  Icons.settings,
+                                  size: 15,
+                                  color: Color(0xffFAB12F),
+                                ),
+                              ),
+                              const Text("Privacy Policy",
+                                  style: TextStyle(
+                                      fontSize: 10, fontFamily: "Belgrano"))
+                            ],
+                          ),
+                        ],
                       ),
                     ],
                   ),
